@@ -1,12 +1,25 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
 
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+    Ok(views.html.main())
   }
+
+  def hot = Action {
+    Ok("")
+  }
+
+  def hotByBoard(board: String) = Action {
+    Ok("")
+  }
+
+  def articlesById(id: String) = Action {
+    Ok("")
+  }
+
+
 
 }
