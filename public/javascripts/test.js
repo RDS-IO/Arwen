@@ -27,13 +27,47 @@ var Post  = React.createClass({
     },
     render: function() {
         return (
-            <div className="container ui form">
-                <h1>{this.state.title}</h1>
+            <div className="container ui">
+            <div className="ui raised segment">
                 <div className="html ui top attached segment">
+                <h1>{this.state.title}</h1>
+                <div className="ui stacked segment">
                     {this.state.content}
                 </div>
+                <h4 className="ui horizontal header divider">
+                Comments
+                </h4>
+                <CommentList data={this.state.comments} />
+                </div>
             </div>
-        )
+            </div>
+        );
+    }
+});
+
+var CommentList = React.createClass({
+    render: function() {
+        var commentNodes = this.props.data.map(function(comment, index) {
+            return (
+                <Comment account={comment.account}
+                comment={comment.comment} timestamp={comment.timestamp} key={index}/>
+            );
+        });
+        return (
+            <div className="commentList">
+                {commentNodes}
+            </div>
+        );
+    }
+});
+
+var Comment = React.createClass({
+    render: function() {
+        return (
+            <div className="ui segment attached secondary">
+                {this.props.comment} {this.props.timestamp}
+            </div>
+        );
     }
 });
 
