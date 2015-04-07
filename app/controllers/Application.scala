@@ -8,6 +8,10 @@ object Application extends Controller {
     Ok(views.html.main())
   }
 
+  def dashboard = Action {
+    Ok("")
+  }
+
   def hot = Action {
     Ok("")
   }

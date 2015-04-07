@@ -5,6 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index
 
+GET     /dashboard                  controllers.Application.dashboard
+
 GET     /hot                        controllers.Application.hot
 
 GET     /hot/:board                 controllers.Application.hotByBoard(board:   String)
