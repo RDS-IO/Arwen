@@ -1,5 +1,12 @@
-#content .container {
-    width: 850px;
+#content {
+    width: 900px;
     position: relative;
+    top: 400px;
     margin: 0px auto;
+}
+#icon {
+    float:left;
+}
+#menu {
+    float:right;
 }

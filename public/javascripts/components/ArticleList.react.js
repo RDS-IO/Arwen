@@ -59,7 +59,9 @@ var ArticleList = React.createClass({
         });
         return (
             <div className="ui container">
+            <div className="ui segment">
                 {articleInfoNodes}
+            </div>
             </div>
         );
     }

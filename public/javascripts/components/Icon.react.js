@@ -1,8 +1,8 @@
 var Icon = React.createClass({
     render: function() {
         return (
-            <h1 className="ui header">
-                <i className="comments icon"></i>
+            <h1 className="ui header" >
+                <i className="massive comments icon"></i>
                     <div className="content">
                         PTT opinion
                     </div>
@@ -13,5 +13,5 @@ var Icon = React.createClass({
 
 var reactComponent = React.render(
     <Icon />,
-    document.getElementById('content')
+    document.getElementById('icon')
 );

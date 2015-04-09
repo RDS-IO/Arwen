@@ -25,5 +25,5 @@ var Menu = React.createClass({
 
 var reactComponent = React.render(
     <Menu />,
-    document.getElementById('content')
+    document.getElementById('menu')
 );
